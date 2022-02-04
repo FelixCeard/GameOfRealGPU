@@ -1,4 +1,4 @@
-import cupy as np
+import numpy as np
 import numpy
 
 from vispy.util.transforms import ortho
@@ -56,7 +56,7 @@ class Canvas(app.Canvas):
         app.Canvas.__init__(self, keys='interactive', size=((W * 5), (H * 5)))
 
         self.program = gloo.Program(VERT_SHADER, FRAG_SHADER)
-        self.texture = gloo.Texture2D(self.img_array.get(), interpolation='linear')
+        self.texture = gloo.Texture2D(self.img_array, interpolation='linear')
 
         self.program['u_texture'] = self.texture
         self.program.bind(gloo.VertexBuffer(self.data))

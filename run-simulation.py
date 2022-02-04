@@ -30,7 +30,7 @@ class GameOfReal(Canvas):
             # self.texture.set_data(np.float32(self.sl.field))
             # print((self.sl.step()))
 
-            self.texture.set_data(numpy.float32((self.sl.step()).get()))
+            self.texture.set_data(numpy.float32((self.sl.step())))
             # print("updated")
             end = time.time()
             print(int((end - start)*1000), 'ms')

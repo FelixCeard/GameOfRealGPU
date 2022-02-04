@@ -15,8 +15,8 @@ https://www.youtube.com/watch?v=KJe9H6qS82I
 
 import math
 
-# import numpy as np
-import cupy as np
+import numpy as np
+# import cupy as np
 from matplotlib import pyplot as plt
 from matplotlib import animation
 
@@ -88,10 +88,10 @@ def logistic2d(size, radius, roll=True, logres=None):
     # Scale factor for the transition width
     if logres is None:
         logres = math.log(min(*size), 2)
-    # with np.errstate(over="ignore"):
+    with np.errstate(over="ignore"):
         # With big radiuses, the exp overflows,
         # but 1 / (1 + inf) == 0, so it's fine
-    logistic = 1 / (1 + np.exp(logres * (radiuses - radius)))
+        logistic = 1 / (1 + np.exp(logres * (radiuses - radius)))
     if roll:
         logistic = np.roll(logistic, y // 2, axis=0)
         logistic = np.roll(logistic, x // 2, axis=1)
