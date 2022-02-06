@@ -4,6 +4,7 @@ import numpy
 from vispy.util.transforms import ortho
 from vispy import gloo
 from vispy import app
+import time
 
 VERT_SHADER = """
 // Uniforms
