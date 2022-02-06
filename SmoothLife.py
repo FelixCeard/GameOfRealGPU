@@ -37,14 +37,14 @@ class Rules:
     N = 0.028
     M = 0.147
 
-    B1 = 0.257
-    B2 = 0.336
-    D1 = 0.365
-    D2 = 0.549
-    N = 0.028
-    M = 0.147
-
-    B2 = 0.4
+    B1 = 0.28
+    # B2 = 0.336
+    # D1 = 0.365
+    # D2 = 0.549
+    # N = 0.028
+    M = 0.2
+    #
+    # B2 = 0.4
 
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)  # Set variables from constructor
